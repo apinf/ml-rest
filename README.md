@@ -69,9 +69,12 @@ It is worth building on top of existing tools, to make our work more focused. Th
 
 [Orange3](https://orange.biolab.si/): machine learning user interface with drag and drop modelling, visualization, data management and more.
 
-    - based on scikit-learn
-    - open issue for REST API design: https://github.com/biolab/orange3/issues/1419
-    - may need a web-based UI widget library
+- based on scikit-learn
+- open issue for REST API design: https://github.com/biolab/orange3/issues/1419
+- may need a web-based UI widget library
+
+## Machine Learning REST Interface(s)
+- Protocols and Structures for Inference [Machine Learning as a Service](http://psikit.net/) - an architecture for presenting machine learning algorithms, their inputs (data) and outputs (predictors) as resource-oriented RESTful web services in order to make machine learning technology accessible to a broader range of people than just machine learning researchers.
 
 ## User Interface
 
