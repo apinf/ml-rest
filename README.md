@@ -106,3 +106,6 @@ Proposals for the data visualization framework include:
 
 ## Time-series analysis
 https://blog.newrelic.com/2016/11/16/dynamic-baseline-alerts/
+
+# Resources
+- [Standardizing the World of Machine Learning Web Service APIs](http://www.kdnuggets.com/2015/07/psi-machine-learning-web-service-apis.html)
