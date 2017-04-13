@@ -74,7 +74,9 @@ It is worth building on top of existing tools, to make our work more focused. Th
 - may need a web-based UI widget library
 
 ## Machine Learning REST Interface(s)
-- Protocols and Structures for Inference [Machine Learning as a Service](http://psikit.net/) - an architecture for presenting machine learning algorithms, their inputs (data) and outputs (predictors) as resource-oriented RESTful web services in order to make machine learning technology accessible to a broader range of people than just machine learning researchers.
+- [Protocols and Structures for Inference Machine Learning as a Service](http://psikit.net/) - an architecture for presenting machine learning algorithms, their inputs (data) and outputs (predictors) as resource-oriented RESTful web services in order to make machine learning technology accessible to a broader range of people than just machine learning researchers.
+  - [JavaScript client](https://github.com/psi-project/client)
+  - [sklearn wrapper](https://github.com/psi-project/sklearn-wrapper)
 
 ## User Interface
 
