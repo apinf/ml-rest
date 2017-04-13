@@ -116,3 +116,4 @@ https://blog.newrelic.com/2016/11/16/dynamic-baseline-alerts/
 - [Standardizing the World of Machine Learning Web Service APIs](http://www.kdnuggets.com/2015/07/psi-machine-learning-web-service-apis.html)
 - [Using Flask to serve a machine learning model as a RESTful webservice](https://www.youtube.com/watch?v=s-i6nzXQF3g)
 - [Machine Learning Rest API in a Docker](https://juan-medina.com/2015/12/05/machine-learning-docker/)
+- [Architecting a Machine Learning System for Risk](https://medium.com/airbnb-engineering/architecting-a-machine-learning-system-for-risk-941abbba5a60)
