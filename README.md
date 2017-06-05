@@ -2,6 +2,31 @@
 
 Businesses and governments have a lot of data, and want to learn about structures and patterns in the data. This might include being able to make predictions extending from the data.
 
+# Use case examples
+
+## Time-series analysis
+Companies, research organizations, governments, etc. often collect data/observations containing timestamps. It is useful in many cases to find trends or patterns in data over time, including the possibility to forecast future trends. These types of analyses fall under the umbrella of **time series analysis**.
+
+Specific examples include:
+- enterprise resource planning and management
+  - staff
+  - servers/compute resources
+  - supply chain
+- environmental monitoring
+
+- https://blog.newrelic.com/2016/11/16/dynamic-baseline-alerts/
+
+## Anomoly detection
+We can search for values that stand out of the normal range, or variance, in medium or large data sets. These 'abnormal' data may point to problems or unique conditions, which need attention. Anomoly detection algorithms can help decision makers quickly find unusual segments of data.
+
+Specific examples include:
+- fraud detection
+- server monitoring and alerting
+
+### Related resources
+- http://scikit-learn.org/stable/modules/outlier_detection.html
+- https://aqibsaeed.github.io/2016-07-17-anomaly-detection/
+
 # Situation
 There are myriad tools to help people design Machine Learning workflows. However, there does not appear to be a visual programming environment with machine learning primitives.
 
@@ -104,30 +129,6 @@ Proposals for the data visualization framework include:
 
 - [Matplotlib D3 (mpld3)](http://mpld3.github.io/) - The  mpld3 project brings together Matplotlib, the popular Python-based  graphing library, and D3js, the popular JavaScript library for creating  interactive data visualizations for the web.
 
-# Use case examples
-
-## Time-series analysis
-Companies, research organizations, governments, etc. often collect data/observations containing timestamps. It is useful in many cases to find trends or patterns in data over time, including the possibility to forecast future trends. These types of analyses fall under the umbrella of **time series analysis**.
-
-Specific examples include:
-- enterprise resource planning and management
-  - staff
-  - servers/compute resources
-  - supply chain
-- environmental monitoring
-
-- https://blog.newrelic.com/2016/11/16/dynamic-baseline-alerts/
-
-## Anomoly detection
-We can search for values that stand out of the normal range, or variance, in medium or large data sets. These 'abnormal' data may point to problems or unique conditions, which need attention. Anomoly detection algorithms can help decision makers quickly find unusual segments of data.
-
-Specific examples include:
-- fraud detection
-- server monitoring and alerting
-
-### Related resources
-- http://scikit-learn.org/stable/modules/outlier_detection.html
-- https://aqibsaeed.github.io/2016-07-17-anomaly-detection/
 
 # Resources
 - [Standardizing the World of Machine Learning Web Service APIs](http://www.kdnuggets.com/2015/07/psi-machine-learning-web-service-apis.html)
