@@ -16,6 +16,8 @@ info:
 tags:
   - name: Classification
     description: Identify which group an observation belongs to.
+  - name: Regression
+    description: 'Predict values of a quantity, based on other observations.'
 paths:
   /sklearn/svm/linear-svc:
     summary: >-
@@ -155,6 +157,61 @@ paths:
           description: Default response
       tags:
         - Classification
+  /sklearn/linear-model/linear-regression:
+    summary: Ordinary least squares Linear Regression.
+    description: >-
+      From the implementation point of view, this is just plain Ordinary Least
+      Squares (scipy.linalg.lstsq) wrapped as a predictor object.
+    put:
+      summary: Create an instance of Linear Regression classifier.
+      description: ''
+      externalDocs:
+        url: >-
+          http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html
+      parameters:
+        - name: fit_intercept
+          in: query
+          required: false
+          schema:
+            type: string
+          description: >-
+            whether to calculate the intercept for this model. If set to false,
+            no intercept will be used in calculations (e.g. data is expected to
+            be already centered).
+        - name: normalize
+          in: query
+          required: false
+          schema:
+            type: string
+          description: >-
+            If True, the regressors X will be normalized before regression. This
+            parameter is ignored when fit_intercept is set to False. When the
+            regressors are normalized, note that this makes the hyperparameters
+            learnt more robust and almost independent of the number of samples.
+            The same property is not valid for standardized data. However, if
+            you wish to standardize, please use preprocessing.StandardScaler
+            before calling fit on an estimator with normalize=False.
+        - name: copy_X
+          in: query
+          required: false
+          schema:
+            type: string
+          description: 'If True, X will be copied; else, it may be overwritten.'
+        - name: n_jobs
+          in: query
+          required: false
+          schema:
+            type: string
+          description: >-
+            The number of jobs to use for the computation. If -1 all CPUs are
+            used. This will only provide speedup for n_targets > 1 and
+            sufficient large problems.
+      operationId: ''
+      responses:
+        default:
+          description: Default response
+      tags:
+        - Regression
 components:
   schemas:
     Order:
