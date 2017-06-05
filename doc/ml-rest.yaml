@@ -18,6 +18,8 @@ tags:
     description: Identify which group an observation belongs to.
   - name: Regression
     description: 'Predict values of a quantity, based on other observations.'
+  - name: Clustering
+    description: Find groups among observations.
 paths:
   /sklearn/svm/linear-svc:
     summary: >-
@@ -212,6 +214,136 @@ paths:
           description: Default response
       tags:
         - Regression
+  /sklearn/cluster/kmeans:
+    description: >-
+      The KMeans algorithm clusters data by trying to separate samples in n
+      groups of equal variance, minimizing a criterion known as the inertia or
+      within-cluster sum-of-squares. This algorithm requires the number of
+      clusters to be specified. It scales well to large number of samples and
+      has been used across a large range of application areas in many different
+      fields.
+    summary: K-Means clustering
+    put:
+      summary: Create a KMeans classifier instance.
+      description: ''
+      externalDocs:
+        url: >-
+          http://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html#sklearn.cluster.KMeans
+      parameters:
+        - name: n_clusters
+          in: query
+          required: false
+          schema:
+            type: string
+          description: >-
+            The number of clusters to form as well as the number of centroids to
+            generate.
+        - name: max_iter
+          in: query
+          required: false
+          schema:
+            type: string
+          description: >-
+            Maximum number of iterations of the k-means algorithm for a single
+            run.
+        - name: n_init
+          in: query
+          required: false
+          schema:
+            type: string
+          description: >-
+            Number of time the k-means algorithm will be run with different
+            centroid seeds. The final results will be the best output of n_init
+            consecutive runs in terms of inertia.
+        - name: init
+          in: query
+          required: false
+          schema:
+            type: string
+          description: |-
+
+
+                Method for initialization, defaults to ‘k-means++’:
+
+                ‘k-means++’ : selects initial cluster centers for k-mean clustering in a smart way to speed up convergence. See section Notes in k_init for more details.
+
+                ‘random’: choose k observations (rows) at random from data for the initial centroids.
+
+                If an ndarray is passed, it should be of shape (n_clusters, n_features) and gives the initial centers.
+        - name: algorithm
+          in: query
+          required: false
+          schema:
+            type: string
+          description: >-
+            K-means algorithm to use. The classical EM-style algorithm is
+            “full”. The “elkan” variation is more efficient by using the
+            triangle inequality, but currently doesn’t support sparse data.
+            “auto” chooses “elkan” for dense data and “full” for sparse data.
+        - name: precompute_distances
+          in: query
+          required: false
+          schema:
+            type: string
+          description: |
+
+
+                Precompute distances (faster but takes more memory).
+
+                ‘auto’ : do not precompute distances if n_samples * n_clusters > 12 million. This corresponds to about 100MB overhead per job using double precision.
+
+                True : always precompute distances
+
+                False : never precompute distances
+        - name: tol
+          in: query
+          required: false
+          schema:
+            type: string
+          description: Relative tolerance with regards to inertia to declare convergence
+        - name: n_jobs
+          in: query
+          required: false
+          schema:
+            type: string
+          description: |
+
+
+                The number of jobs to use for the computation. This works by computing each of the n_init runs in parallel.
+
+                If -1 all CPUs are used. If 1 is given, no parallel computing code is used at all, which is useful for debugging. For n_jobs below -1, (n_cpus + 1 + n_jobs) are used. Thus for n_jobs = -2, all CPUs but one are used.
+        - name: random_state
+          in: query
+          required: false
+          schema:
+            type: string
+          description: >-
+            The generator used to initialize the centers. If an integer is
+            given, it fixes the seed. Defaults to the global numpy random number
+            generator.
+        - name: verbose
+          in: query
+          required: false
+          schema:
+            type: string
+          description: Verbosity mode.
+        - name: copy_x
+          in: query
+          required: false
+          schema:
+            type: string
+          description: >-
+            When pre-computing distances it is more numerically accurate to
+            center the data first. If copy_x is True, then the original data is
+            not modified. If False, the original data is modified, and put back
+            before the function returns, but small numerical differences may be
+            introduced by subtracting and then adding the data mean.
+      operationId: ''
+      responses:
+        default:
+          description: Default response
+      tags:
+        - Clustering
 components:
   schemas:
     Order:
