@@ -33,16 +33,6 @@ There are myriad tools to help people design Machine Learning workflows. However
 # Goal
 Build a general purpose machine learning programming environment that is accessible by a REST API and web user interface.
 
-# Design
-
-The design will most likely consist of a REST API and User Interface, developed as separate components.
-
-A REST API would make it easy to use Machine Learning algorithms, since users would not have to install or maintain the ML software.
-
-The user interface for machine learning algorithms will make it easy for people with little programming experience to build machine learning services. The UI should include interface for interacting with data, sequencing ML tasks, and accessing output. It might also include basic visualizations to give users insight into data (histogram, etc)
-
-![UI Mockup](doc/WireCloud-machineLearning-mockup.png)
-
 # Roadmap
 
 - Sketch out REST API using design-first API tool
@@ -55,7 +45,14 @@ The user interface for machine learning algorithms will make it easy for people 
 - Scaffold initial REST API
 - Prototype initial User Interface using UI framework
 
-# API
+
+# Design
+
+The design will most likely consist of a REST API and User Interface, developed as separate components.
+
+## API
+
+A REST API would make it easy to use Machine Learning algorithms, since users would not have to install or maintain the ML software.
 
 The API might be structured to mirror the Orange3 User Interface. Specifically, the Orange3 UI has the following structure:
 
@@ -65,7 +62,11 @@ The API might be structured to mirror the Orange3 User Interface. Specifically, 
 - **Evaluate** - widgets to test the strength of chosen predictive algorithm(s)
 - **Unsupervised** - widgets for selecting unsupervised learning models (probably can be combined under the Model section of the API)
 
-# UI
+## UI
+
+The user interface for machine learning algorithms will make it easy for people with little programming experience to build machine learning services. The UI should include interface for interacting with data, sequencing ML tasks, and accessing output. It might also include basic visualizations to give users insight into data (histogram, etc)
+
+![UI Mockup](doc/WireCloud-machineLearning-mockup.png)
 
 UI contains features such as:
 - Upload .csv file with historical data
