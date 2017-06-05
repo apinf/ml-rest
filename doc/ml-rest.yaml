@@ -455,6 +455,8 @@ paths:
       responses:
         default:
           description: Default response
+      tags:
+        - Dimensionality reduction
 components:
   schemas:
     Order:
