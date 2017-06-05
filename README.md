@@ -2,38 +2,33 @@
 
 Businesses and governments have a lot of data, and want to learn about structures and patterns in the data. This might include being able to make predictions extending from the data.
 
-There are myriad tools to help people design Machine Learning workflows. However, there does not appear to be a simple. 
+# Situation
+There are myriad tools to help people design Machine Learning workflows. However, there does not appear to be a visual programming environment with machine learning primitives.
 
 # Goal
-General purpose Machine Learning toolkit that is accessible by a REST API and web user interface.
+Build a general purpose machine learning programming environment that is accessible by a REST API and web user interface.
 
-# Ideas
+# Design
 
-1. Create a REST API for machine learning algorithms. A REST API would make it easy to use Machine Learning algorithms, since users would not have to install or maintain the ML software.
+The design will most likely consist of a REST API and User Interface, developed as separate components.
 
-2. Create the interactive page for machine learning algorithms with user understanding UI.
-    - UI includes interface for interacting with data, sequencing ML tasks, and accessing output
-    - UI might include basic visualizations to give users insight into data (histogram, etc)
+A REST API would make it easy to use Machine Learning algorithms, since users would not have to install or maintain the ML software.
+
+The user interface for machine learning algorithms will make it easy for people with little programming experience to build machine learning services. The UI should include interface for interacting with data, sequencing ML tasks, and accessing output. It might also include basic visualizations to give users insight into data (histogram, etc)
 
 # Roadmap
 
-- Create draft document describing idea (was done usgin PiratePad)
-- Move draft document to Github repository (open license)
 - Sketch out REST API using design-first API tool
     - seek feedback on API design from Orange3 developers, APInf team, ML community
+- Create wireframe, and possibly mockups, of User Interface
 - Research/choose framework(s) and libraries to commence development
     - REST framework
     - UI framework (if applicable)
     - Visualization framework (if applicable)
 - Scaffold initial REST API
-- Create wireframe of User Interface
 - Prototype initial User Interface using UI framework
 
-# Design
-
-The design will peobably consist of an API and User Interface, developed as separate components.
-
-## API
+# API
 
 The API might be structured to mirror the Orange3 User Interface. Specifically, the Orange3 UI has the following structure:
 
@@ -43,18 +38,14 @@ The API might be structured to mirror the Orange3 User Interface. Specifically, 
 - **Evaluate** - widgets to test the strength of chosen predictive algorithm(s)
 - **Unsupervised** - widgets for selecting unsupervised learning models (probably can be combined under the Model section of the API)
 
-## UI
+# UI
 
 UI contains features such as:
 - Upload .csv file with historical data
 - Set the number of traits (hallmarks, set of data was based on predecting)
 - Area of output result
 
-## Training data
-
-Need set of data with correctly labeled output. This data is known as a training data set, and is commonly available in Machine Learning frameworks such as scikit-learn.
-
-# Existing Tools
+# Existing tools
 
 It is worth building on top of existing tools, to make our work more focused. This section outlines relevant tools for building the idea as easily as possible.
 
@@ -68,33 +59,32 @@ It is worth building on top of existing tools, to make our work more focused. Th
 
 ## Machine Learning User Interface(s)
 
+### Orange3
 [Orange3](https://orange.biolab.si/): machine learning user interface with drag and drop modelling, visualization, data management and more.
 
 - based on scikit-learn
 - open issue for REST API design: https://github.com/biolab/orange3/issues/1419
 - may need a web-based UI widget library
 
+While Orange3 has a user interface, it is based on the Qt framework. This design decision means Orange3 is primarily relegated to Desktop usage. It may be desirable to build a web native user interface, so that no end-user download is necessary (aside from a web browser) to use the software .
+
 ## Machine Learning REST Interface(s)
 - [Protocols and Structures for Inference Machine Learning as a Service](http://psikit.net/) - an architecture for presenting machine learning algorithms, their inputs (data) and outputs (predictors) as resource-oriented RESTful web services in order to make machine learning technology accessible to a broader range of people than just machine learning researchers.
   - [JavaScript client](https://github.com/psi-project/client)
   - [sklearn wrapper](https://github.com/psi-project/sklearn-wrapper)
 
-## User Interface
-
-While Orange3 has a user interface, it is based on the Qt framework. This design decision means Orange3 is primarily relegated to Desktop usage. It may be desirable to build a web native user interface, so that no end-user download is necessary (aside from a web browser) to use the software .
-
-### General UI widgets
+## General UI widgets
 To build out the overall user interface, we can select an existing JS UI framework, such as:
 
 - [Onsen UI](https://onsen.io/): mobile friendly UI framework with many common widgets
 - [jQuery UI](http://jqueryui.com/)
 
-### Graph/data flow widgets
+## Graph/data flow widgets
 Following the conventions in the Orange3 user interface, ML sequences can be modeled as data flows. To facilitate this type of modelling/interation, we can build on an existing JavaScript UI framework such as the following:
 
 - [mxGraph](https://github.com/jgraph/mxgraph)
 
-### Flow-based programming environments
+## Flow-based programming environments
 There are some programming environments that support a flow-based visual workflow. The following examples are open-source, and run in aweb browser:
 
 - [NodeRed](http://nodered.org/) is a browser-based editor that makes it easy to wire together flows using the wide range of nodes in the palette that can be deployed to its runtime in a single-click.
@@ -117,7 +107,12 @@ Proposals for the data visualization framework include:
 # Use case examples
 
 ## Time-series analysis
-https://blog.newrelic.com/2016/11/16/dynamic-baseline-alerts/
+Companies, research organizations, governments, etc. often collect data/observations containing timestamps. It is useful in many cases to find trends or patterns in data over time, including the possibility to forecast future trends. These types of analyses fall under the umbrella of **time series analysis**.
+
+- https://blog.newrelic.com/2016/11/16/dynamic-baseline-alerts/
+
+## Anomoly detection
+We can search for values that stand out of the normal range, or variance, in medium or large data sets. These 'abnormal' data may point to problems or unique conditions, which need attention. Anomoly detection algorithms can help decision makers quickly find unusual segments of data.
 
 # Resources
 - [Standardizing the World of Machine Learning Web Service APIs](http://www.kdnuggets.com/2015/07/psi-machine-learning-web-service-apis.html)
