@@ -94,6 +94,12 @@ Following the conventions in the Orange3 user interface, ML sequences can be mod
 
 - [mxGraph](https://github.com/jgraph/mxgraph)
 
+### Flow-based programming environments
+There are some programming environments that support a flow-based visual workflow. The following examples are open-source, and run in aweb browser:
+
+- [NodeRed](http://nodered.org/) is a browser-based editor that makes it easy to wire together flows using the wide range of nodes in the palette that can be deployed to its runtime in a single-click.
+- [WireCloud](https://github.com/Wirecloud/wirecloud) is an end-user centred web application mashup platform aimed at allowing end users without programming skills to easily create web applications and dashboards/cockpits
+
 ## Visualization
 
 For similar reasons as the user interface, the visualization framework should be based on web standards. 
