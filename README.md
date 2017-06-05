@@ -60,6 +60,7 @@ It is worth building on top of existing tools, to make our work more focused. Th
 
 ## REST framework(s)
 - [Eve](http://python-eve.org/rest_api_for_humans.html) is the Simple Way to REST that is based on Flask
+- [Connexion](https://github.com/zalando/connexion) Swagger/OpenAPI First framework for Python on top of Flask with automatic endpoint validation & OAuth2 support 
 
 ## Machine Learning Framework(s)
 
