@@ -41,6 +41,8 @@ A REST API would make it easy to use Machine Learning algorithms, since users wo
 
 The user interface for machine learning algorithms will make it easy for people with little programming experience to build machine learning services. The UI should include interface for interacting with data, sequencing ML tasks, and accessing output. It might also include basic visualizations to give users insight into data (histogram, etc)
 
+![UI Mockup](doc/WireCloud-machineLearning-mockup.png)
+
 # Roadmap
 
 - Sketch out REST API using design-first API tool
