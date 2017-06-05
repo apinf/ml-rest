@@ -114,6 +114,14 @@ Companies, research organizations, governments, etc. often collect data/observat
 ## Anomoly detection
 We can search for values that stand out of the normal range, or variance, in medium or large data sets. These 'abnormal' data may point to problems or unique conditions, which need attention. Anomoly detection algorithms can help decision makers quickly find unusual segments of data.
 
+Specific examples include:
+- fraud detection
+- server monitoring and alerting
+
+### Related resources
+- http://scikit-learn.org/stable/modules/outlier_detection.html
+- https://aqibsaeed.github.io/2016-07-17-anomaly-detection/
+
 # Resources
 - [Standardizing the World of Machine Learning Web Service APIs](http://www.kdnuggets.com/2015/07/psi-machine-learning-web-service-apis.html)
 - [Using Flask to serve a machine learning model as a RESTful webservice](https://www.youtube.com/watch?v=s-i6nzXQF3g)
