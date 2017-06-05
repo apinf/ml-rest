@@ -109,6 +109,13 @@ Proposals for the data visualization framework include:
 ## Time-series analysis
 Companies, research organizations, governments, etc. often collect data/observations containing timestamps. It is useful in many cases to find trends or patterns in data over time, including the possibility to forecast future trends. These types of analyses fall under the umbrella of **time series analysis**.
 
+Specific examples include:
+- enterprise resource planning and management
+  - staff
+  - servers/compute resources
+  - supply chain
+- environmental monitoring
+
 - https://blog.newrelic.com/2016/11/16/dynamic-baseline-alerts/
 
 ## Anomoly detection
