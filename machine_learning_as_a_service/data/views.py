@@ -3,7 +3,7 @@ import requests
 
 from django.shortcuts import render
 
-from data.models import DataFrame
+from data.models import Data
 
 # Create your views here.
 def save_csv_as_dataframe(request):
@@ -19,10 +19,10 @@ def save_csv_as_dataframe(request):
             print(csv_data)
 
             # Create Data Frame instance
-            data_frame = DataFrame()
+            data = Data()
 
             # Add CSV Data to data_frame field
-            data_frame.data_frame = csv_data
+            data.data_frame = csv_data
 
             # Save Data Frame
-            data_frame.save()
+            data.save()
