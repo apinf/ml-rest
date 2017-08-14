@@ -2,6 +2,32 @@ tags:
   -
     name: data
     description: 'Endpoints that work with data. E.g. importing data and creating data frames for subsequent processing.'
+paths:
+  /data/save_csv_as_dataframe:
+    post:
+      operationId: save_csv_as_dataframe
+      summary: 'This endpoint saves a web-accessible CSV file as a Pandas DataFrame.'
+      tags:
+        - data
+      responses:
+        '200':
+          description: 'Returns a response object with ''data_frame_id'' property, which can be used to retrieve data set for subsequent processing.'
+          schema:
+            x-oad-type: integer
+            type: integer
+            title: data_frame_id
+            description: 'ID of Pandas DataFrame which has been stored in database.'
+            format: int32
+          x-oad-type: response
+      parameters:
+        -
+          name: csv_url
+          in: header
+          description: 'The HTTP or HTTPS URL to download the CSV file.'
+          required: true
+          type: string
+          x-oad-type: parameter
+    x-oad-type: operation
 info:
   title: 'Machine Learning as a Service'
   version: '0.1'
