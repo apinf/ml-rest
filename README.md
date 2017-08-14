@@ -100,6 +100,11 @@ While Orange3 has a user interface, it is based on the Qt framework. This design
 - [Protocols and Structures for Inference Machine Learning as a Service](http://psikit.net/) - an architecture for presenting machine learning algorithms, their inputs (data) and outputs (predictors) as resource-oriented RESTful web services in order to make machine learning technology accessible to a broader range of people than just machine learning researchers.
   - [JavaScript client](https://github.com/psi-project/client)
   - [sklearn wrapper](https://github.com/psi-project/sklearn-wrapper)
+  
+  ### Machine Learning as a Service
+  - [Apache PredictionIO](https://predictionio.incubator.apache.org/)
+  - [Seldon](https://www.seldon.io/) is an enterprise-grade open-source machine learning deployment platform
+  
 
 ## General UI widgets
 To build out the overall user interface, we can select an existing JS UI framework, such as:
