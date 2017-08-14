@@ -1,3 +1,7 @@
+tags:
+  -
+    name: data
+    description: 'Endpoints that work with data. E.g. importing data and creating data frames for subsequent processing.'
 info:
   title: 'Machine Learning as a Service'
   version: '0.1'
