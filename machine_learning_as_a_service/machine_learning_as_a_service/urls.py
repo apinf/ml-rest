@@ -22,7 +22,7 @@ from lepo.router import Router
 from lepo.validate import validate_router
 from lepo_doc.urls import get_docs_urls
 
-from data import data_views
+from data import views as data_views
 
 router = Router.from_file(resource_filename(__name__, 'machine_learning_as_a_service-openapi_spec_v2.yaml'))
 router.add_handlers(data_views)
