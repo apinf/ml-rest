@@ -7,6 +7,9 @@ class Data(models.Model):
 
     source_url = models.URLField(null=True)
 
+    class Meta:
+        verbose_name_plural = "data"
+
     def __str__(self):
         if (self.source_url):
             return self.source_url
