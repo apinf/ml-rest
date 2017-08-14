@@ -1,0 +1,14 @@
+info:
+  title: 'Machine Learning as a Service'
+  version: '0.1'
+  description: 'A prototype API to provide machine learning functions via REST API (Machine Learning as a Service).'
+  contact:
+    name: 'Brylie Christopher Oxley'
+  license:
+    name: 'Creative Commons Zero'
+    url: 'https://creativecommons.org/publicdomain/zero/1.0/'
+basePath: /
+schemes:
+  - http
+  - https
+swagger: '2.0'
