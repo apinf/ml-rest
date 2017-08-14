@@ -13,9 +13,23 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
+from pkg_resources import resource_filename
+
+from django.conf.urls import include, url
 from django.contrib import admin
+
+from lepo.router import Router
+from lepo.validate import validate_router
+from lepo_doc.urls import get_docs_urls
+
+from . import views
+
+router = Router.from_file(resource_filename(__name__, 'machine_learning_as_a_service-openapi_spec_v2.yaml'))
+router.add_handlers(views)
+validate_router(router)
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^api/', include(router.get_urls(), 'api')),
+    url(r'^api/', include(get_docs_urls(router, 'api-docs'), 'api-docs')),
 ]
