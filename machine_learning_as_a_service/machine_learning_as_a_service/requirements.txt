@@ -1,5 +1,6 @@
 Django==1.11.4
-pytz==2017.2
 iso8601==0.1.11
 jsonschema==2.6.0
 marshmallow==2.13.5
+pytz==2017.2
+PyYAML==3.12
