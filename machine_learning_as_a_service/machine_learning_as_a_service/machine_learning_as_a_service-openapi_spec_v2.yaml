@@ -24,7 +24,7 @@ paths:
           name: csv_url
           in: header
           description: 'The HTTP or HTTPS URL to download the CSV file.'
-          required: true
+          required: false
           type: string
           x-oad-type: parameter
     x-oad-type: operation
