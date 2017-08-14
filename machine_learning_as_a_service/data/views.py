@@ -23,6 +23,7 @@ def save_csv_as_dataframe(request):
 
             # Add CSV Data to data_frame field
             data.data_frame = csv_data
+            data.source_url = csv_url
 
             # Save Data Frame
             data.save()
