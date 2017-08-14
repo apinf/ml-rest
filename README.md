@@ -78,8 +78,9 @@ UI contains features such as:
 It is worth building on top of existing tools, to make our work more focused. This section outlines relevant tools for building the idea as easily as possible.
 
 ## REST framework(s)
+- [Connexion](https://github.com/zalando/connexion) Swagger/OpenAPI First framework for Python on top of Flask with automatic endpoint validation & OAuth2 support
 - [Eve](http://python-eve.org/rest_api_for_humans.html) is the Simple Way to REST that is based on Flask
-- [Connexion](https://github.com/zalando/connexion) Swagger/OpenAPI First framework for Python on top of Flask with automatic endpoint validation & OAuth2 support 
+- [Lepo](https://github.com/akx/lepo) – Contract-first REST APIs in Django
 
 ## Machine Learning Framework(s)
 
