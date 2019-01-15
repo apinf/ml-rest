@@ -11,6 +11,6 @@ pandas==0.20.3
 python-dateutil==2.6.1
 pytz==2017.2
 PyYAML>=4.2b1
-requests==2.18.3
+requests>=2.20.0
 six==1.10.0
 urllib3>=1.23
